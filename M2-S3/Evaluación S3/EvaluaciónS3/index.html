@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon"type="image/png"href="./img/n.png"/>
+        <title>Nimrodel Pub Restaurant</title> 
+        <!--Fontawemose-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha384- UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./css/style.css"><!--Link archivo Css-->
+      </head>
+  
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./img/n.png"class="w-25"alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Nuestros Productos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#comuniquémonos">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#reserva">Reservas</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <section id="titulo1">  
+      <h1 class="text">Nimrodel Pub Restaurant</h1>
+    </section>
+    <!--Contenido-->
+    <main>
+        <section id="titulo2">
+          <h2 class="text">Destacados de la semana</h2>
+        </section>
+            <div class="cards">
+                <div class="col">
+                  <img src="./img/bebidas.jpg" class="" alt="">
+                  <h5 class="card-title">Bebidas</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam nemo, vero explicabo vitae maxime rem itaque hic? Dicta ex earum suscipit.</p>
+                </div>
+                <div class="col">
+                  <img src="./img/tablas.jpg" class="" alt="">
+                  <h5 class="card-title">Tablas</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam nemo, vero explicabo vitae maxime rem itaque hic? Dicta ex earum suscipit.</p>
+                </div>
+                <div class="col">
+                  <img src="./img/shop.jpg" class="" alt="">
+                  <h5 class="card-title">Shop Cervezas</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam nemo, vero explicabo vitae maxime rem itaque hic? Dicta ex earum suscipit.</p>
+                </div>
+            </div>
+      </main>
+        <section class="contact" id="comuniquémonos">
+            <form action="mensaje1.html">
+              <div><h3>Contacto</h3></div>
+              <div>
+                  <label for="nombre" class="form-label">Nombre</label> </li>
+                  <input type="text" class="form-control" required pattern="[a-zA-Z]{2-200}"></li>
+              </div>
+              <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              </div>
+              <div>
+                <label for="teléfono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" required pattern="^[0-9]{9}$" size="10" maxlength="9">
+              <div class="mb-3">
+              </div>
+              <div>
+                <label for="datalist" class="form-label">Motivo</label>
+                <input class="form-control" list="opciones" id="exampleDataList">
+                    <datalist id="opciones">
+                      <option value="Felicitaciones">
+                      <option value="Comentarios">
+                      <option value="Reclamos">
+                      <option value="Sugerencias">
+                    </datalist>
+              </div>
+              <div class="form-floating">
+                <label for="floatingTextarea2">Comentarios</label>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+              </div>
+              <div class="mt-3">
+                <button type="submit" class="button">Enviar</button></div>
+            </form>
+        </section>
+        <section class= "toreserve" id="reserva">
+            <form action="mensaje2.html">
+              <div><h3>Reservas</h3></div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Apellido" required pattern="[a-zA-Z]{2-200}">
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tucorreo@aquí.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="9-1234567" required pattern="^[0-9]{9}$" size="10" maxlength="9">
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="exampleFormControlInput1">
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="exampleFormControlInput1">
+              </div>
+              <div class="mt-3">
+                <button type="submit" class="button">Enviar</button>
+              </div>
+            </form>
+        </section>
+    
+  <!--Carrusel-->
+  <section id="carrusel" class="container-fluid mb-2 p-0 stycky-bottom">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators mb-5">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/chorillana.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/mojito.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/vino.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
+  </section>
+    <!--Pie de página-->
+    <footer>
+        <p>Todos los derechos reservados <i class="fa-regular fa-registered"></i>.</p>
+    
+      <!--Javascript o bootstrap bundle, bootstrap popper-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </footer>
+</body> <!-- etiqueta de cierre-->
+</html>

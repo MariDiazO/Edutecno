@@ -1,0 +1,89 @@
+<!-- Creando un comentario en HTML -->
+<!-- HTML:5 Genera estructura basica automaticamente-->
+<!DOCTYPE html> <!-- Siempre incluye etiqueta DOCTYPE e indica el tipo de archivo-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!--Enlace hacia la pagina de estilo de boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body><!-- etiqueta de apertura del body-->
+    <!-- barra de navegacion o navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bootcamp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--etiquetas para titulos H1,H2,H3,H4,H5,H6-->
+    <h2 class="text-center ">Bill Mollison</h2>
+
+    <hr>
+        <blockquote>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repudiandae repellendus rerum! Perspiciatis quo repellendus nesciunt veritatis cumque placeat sint at a voluptatum ipsa. Porro veritatis saepe maxime voluptates deserunt!</p>
+        <p>Este es otro párrafo</p><hr><br>
+        <p><b>ÍNDICE</b></p></blockquote>
+        <br>
+    <!--OrderedList-->
+    <ol>
+        <b><li>Datos Personales</li>
+        <li>Antecedentes Académicos</li>
+        <li>Experiencia Laboral</li>
+        <li>Reconocimientos</li></b>
+    </ol>
+        <hr><p class="ms-5"></p><br>
+
+        <h5> DATOS PERSONALES</h5><br>
+        <p><b>NOMBRE:</b> Bruce Charles Mollison </p>
+        <p><b>FECHA DE NACIMIENTO:</b> 04-05-1928</p>
+        <p><b>TELÉFONO:</b> 9-87654330</p>
+        <p><b>RUT:</b> 15.776.434-k</p><br>
+
+        <h5>ANTECEDENTES ACADÉMICOS</h5>
+        <ul><!--UnorderedList-->
+            <li>Ingeniería en robótica - <i>Universidad de Oxford</i></li><br>
+        </ul>
+
+        <h5>EXPERIENCIA LABORAL</h5>
+        <ul>
+            <li><i>La Nasa:</i></li> Astronauta -1998-
+            <li><i>Tesla</i></li> Ingeniero en robótica -2002-</ul><br>
+
+        <h5>RECONOCIMIENTOS</h5>
+            <ul>
+                <li>Premio Nobel de la paz - 2000</li>
+                <li>Primer lugar en concurso de danza contemporánea - Londres 1990</li>
+                <li>Segundo lugar Master Chef - Chile 2022</li>
+            </ul>
+            <br><p class="text-end me-5"><br>              
+        Para más información, visite <a href="https://cl.linkedin.com/" target="_blank">LinkedIn/BillMollison</a> 
+    </p>
+    
+
+    <!--Javascript o bootstrap bundle, bootstrap popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body> <!-- etiqueta de cierre-->
+</html>
