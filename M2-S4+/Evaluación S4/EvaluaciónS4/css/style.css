@@ -1,0 +1,85 @@
+/* Pantalla extra-grande */
+*{
+    font-family: 'Times New Roman', Times, serif;
+  }
+/* NavBar*/
+nav{
+    background-image: url("../img/fondo.jpg");
+    background-size: 25%;
+    background-repeat: repeat-x;
+}
+.navbar-brand img{
+    width: 15%
+}
+.navbar-nav{
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+/* Títulos */
+
+h1{
+    color: grey;
+    font-size: 4em;
+    margin: 3%;
+}
+h4{
+    text-decoration: overline;
+    text-decoration-thickness: 3px;
+}
+/* formulario */
+.formulario{
+    width: 60%;
+    border-radius: 2%;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    height: 10em;
+    background-image: url("../img/fondo.jpg");
+  }
+
+/* Pantalla grande */
+@media (min-width: 961px) and (max-width: 1200px){
+
+    nav{
+    background-size: 50%;
+    background-repeat: repeat-x;
+    }
+    nav .flex-container{
+        flex-direction: column;
+    }
+    ul {
+        list-style-type: none;
+        width: 100%;
+    }
+    .card1 .card2 {
+        align-items: inherit;
+    }
+    .card3{
+        align-content: center;
+    }
+    .container2 {
+        padding-inline: 100px 100px;
+    }
+}
+/* Pantalla mediana */
+@media (min-width: 541px) and (max-width: 960px){
+    nav{
+        background-size: 100%;
+        background-repeat: repeat-x;
+        }
+}
+
+/* Pantalla pequeña */
+@media (max-width: 540px){
+    nav{
+        background-size: 100%;
+        background-repeat: repeat-x;
+        }
+     footer{
+        height: fit-content;
+        background-position: initial;
+    }
+}

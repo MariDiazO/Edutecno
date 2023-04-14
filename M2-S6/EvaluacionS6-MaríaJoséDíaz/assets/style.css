@@ -1,0 +1,77 @@
+/*pantalla extragrande*/
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+nav{
+    background-image: url(/img/fondo.jpg);
+    background-image: repeat-x;
+}
+h1{
+    margin-top: 3%;
+    padding: 2%;
+    font-weight: bold;
+    margin: 2%; padding: auto;
+}
+h4{
+    margin-top: 2%;
+    font-weight: bold;
+    text-decoration-line: overline;
+    text-decoration-thickness: 3px;
+}
+.card-title{
+    text-align: center;
+    font-weight: bold;
+    margin: 2%; padding: 2%;
+}
+.card-text{
+    margin: 2%; padding: 4%;
+}
+
+form {
+    text-align: center;
+    align-content:baseline;
+    margin: 0%;
+    padding: 2%;
+}
+footer{
+    margin: 0%; padding: 5%;
+    height: 15%;
+    background-image: url(/img/fondo.jpg);
+}
+/*pantalla grande*/
+@media (min-width: 961px) and (max-width: 1200px){
+    nav{
+    height: 15em ;
+    background-image: url("/img/fondo.jpg");
+    background-size: 50%;
+    background-repeat: repeat-x;
+    }
+    ul {
+        list-style-type: none;
+        width: 200px;
+    }
+    .card1 .card2 {
+        align-items: inherit;
+    }
+    .card3{
+        align-content: center;
+    }
+    .container2 {
+        padding-inline: 100px 100px;
+    }
+}
+/* Pantalla mediana */
+@media (min-width: 541px) and (max-width: 960px){
+    footer{
+        min-height: fit-content;
+        background-size: auto;
+    }
+}
+
+/* Pantalla pequeña */
+@media (max-width: 540px){
+    footer{
+    min-height: fit-content;
+    background-size: auto;
+    }
+}
