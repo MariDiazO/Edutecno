@@ -15,12 +15,18 @@ var rutCliente = prompt("Ingrese su rut sin guión, ejemplo: 17034456k")
 var claveCliente = prompt("Ingrese su clave")
 
 
-var cliente = new Cliente("Flor Flores","18656892k","0007",40000)
-var cliente = new Cliente("Pedro Piedra","165436547","2020",500000)
-var cliente = new Cliente("Juan Juárez","154342349","4321",100000)
+var cliente = new Cliente("Flor Flores","18919818k","0007",40000)
+var cliente = new Cliente("Pedro Piedra","178187178","2020",500000)
+var cliente = new Cliente("Juan Juárez","198189198","4321",100000)
 
 //los indices en programacion parten desde 0 (0,1,2)
 var listaClientes ={ cliente1,cliente2,cliente3}
+
+//pedir ingreso de datos
+//ingrese el identificador y la clave
+alert("Bienvenido a Banco Estado")
+var rutCliente = prompt("Ingrese su rut sin guión, Ejemplo: 20212313K")
+var claveCliente = prompt("Ingrese su clave")
 
 //Si los datos no coinciden se mostrara un mensaje de error
 var permiso = false
@@ -31,10 +37,10 @@ for (let index = 0; index < listaClientes.lenght; index++){
     cliente = listaClientes[indice]
     menu(cliente)
     break; 
+    }
 }
 
-//funcion menu que se repite internamente
-function menu(cliente){
+function menu(cliente){ //funcion menu que se repite internamente
     let opcion = ""
     do {
         let opcion = prompt("Seleccione una opción\n"+
@@ -44,24 +50,24 @@ function menu(cliente){
             "4,- Salir")
         switch (opcion) {
             case "1"://ver saldo
-                alert("Su saldo actual es:"+cliente.saldo)
+                alert("Su saldo actual es:"+cliente.saldo) //Luego podrá ver su saldo,...
                 break;
-            case "2"://realizar giro
-        
+            case "2"://realizar giros (el saldo se modificará)
+                var a = document.getElementById("txtA").value;
+                var b = document.getElementById("txtB").value;
+                var result = parseInt(a) - parseInt(b);
+                alert("Tu saldo final es" result);
+        }
             break;
-            case "3"://realizar deposito
+            case "3"://realizar depósito
 
             break;
-            case "3"://salir
+            case "4"://Salir
             
             break;
             default: //no se cumple ningun caso, mensaje por default
 
             break;  
         }       
-    } while (condition);
+    } while (option != "4");//mientras opcion sea diferente de 4
 }
-//Luego podrá ver su saldo,...
-//...realizar giros o...
-//...depósitos
-//si realiza giros su saldo se modificará
