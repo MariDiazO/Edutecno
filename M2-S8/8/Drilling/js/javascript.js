@@ -1,6 +1,4 @@
 //menú de cajero automático
-
-alert("Bienvenido a Banco Estado")
 //Los clientes cuentan con un nombre, un identificador,clave y saldo de su cuenta.
 class Cliente{ 
     constructor(nombre,identificador,clave,saldo){
@@ -10,17 +8,13 @@ class Cliente{
         this.saldo = saldo
     }
 }
-//pedir validación de identidad (identificador y clave)
-var rutCliente = prompt("Ingrese su rut sin guión, ejemplo: 17034456k")
-var claveCliente = prompt("Ingrese su clave")
-
-
-var cliente = new Cliente("Flor Flores","18919818k","0007",40000)
-var cliente = new Cliente("Pedro Piedra","178187178","2020",500000)
-var cliente = new Cliente("Juan Juárez","198189198","4321",100000)
+//establecer variantes
+var cliente1 = new Cliente("Flor Flores","18919818k","ff11",40000)
+var cliente2 = new Cliente("Pedro Piedra","178187178","pp22",500000)
+var cliente3 = new Cliente("Juan Juárez","198189198","jj33",100000)
 
 //los indices en programacion parten desde 0 (0,1,2)
-var listaClientes ={ cliente1,cliente2,cliente3}
+var listaClientes =[cliente1,cliente2,cliente3]
 
 //pedir ingreso de datos
 //ingrese el identificador y la clave
@@ -30,20 +24,25 @@ var claveCliente = prompt("Ingrese su clave")
 
 //Si los datos no coinciden se mostrara un mensaje de error
 var permiso = false
-for (let index = 0; index < listaClientes.lenght; index++){
-    if (listaClientes[index].rut == rutCliente && listaClientes[indice].clave == claveCliente) {
-    permiso = true  
-    alert("Hola, bienvenido"+listaClientes[indice].nombre) 
-    cliente = listaClientes[indice]
-    menu(cliente)
-    break; 
+var cliente
+for (let indice = 0; indice < listaClientes.length; indice++) {
+    if(listaClientes[indice].rut == rutCliente && listaClientes[indice].clave == claveCliente){
+        permiso = true
+        alert("Hola, bienvenido "+listaClientes[indice].nombre)
+        cliente = listaClientes[indice]
+        menu(cliente)
+        break;
+    }else{
+        alert("No ha podido ingresar, datos incorrectos") 
     }
 }
-
-function menu(cliente){ //funcion menu que se repite internamente
+//un menú en el cual el usuario podrá decidir 
+//que desea hacer (deposito, giro, ver su saldo o salir). 
+//El menú se repite hasta que el usuario elija salir.
+function menu(cliente) { //funcion menu que se repite internamente
     let opcion = ""
     do {
-        let opcion = prompt("Seleccione una opción\n"+
+        opcion = prompt("Seleccione una opción\n"+
             "1.- Ver saldo\n"+
             "2.- Realizar giro\n"+
             "3.- Realizar depósitos\n"+
@@ -56,18 +55,27 @@ function menu(cliente){ //funcion menu que se repite internamente
                 var a = document.getElementById("txtA").value;
                 var b = document.getElementById("txtB").value;
                 var result = parseInt(a) - parseInt(b);
-                alert("Tu saldo final es" result);
-        }
-            break;
+                alert("Tu saldo final es"+result);
+                 break;
             case "3"://realizar depósito
 
-            break;
+                break;
             case "4"://Salir
             
-            break;
+                break;
             default: //no se cumple ningun caso, mensaje por default
 
-            break;  
-        }       
-    } while (option != "4");//mientras opcion sea diferente de 4
+                break;  
+        }
+    }  while (option != "4");//mientras opcion sea diferente de 4
 }
+
+//for in es para recorrer objetos
+// var object = { //objeto de tipo JSON
+//     a: 1,// key:value
+//     b: 2,
+//     c: 3
+// }
+// for (const key in object) {
+//     alert(object[key])
+// }

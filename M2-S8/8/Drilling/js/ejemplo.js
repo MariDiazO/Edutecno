@@ -20,7 +20,7 @@ var listaClientes = [cliente1,cliente2,cliente3]// tamaño 3, existen 3 elemento
 
 //pedir ingreso de datos
 //ingrese el identificador y la clave
-alert("Bienvenido, NOMBRE BANCO")
+alert("Bienvenido a Banco Estado")
 var rutCliente = prompt("Ingrese su rut sin guión, Ejemplo: 27080007K")
 var claveCliente = prompt("Ingrese su clave")
 
@@ -81,4 +81,6 @@ function menu() {
         }
 
 
-    } while (opcion != "4");//mientras opcion sea diferente de 4
+    } while (opcion != "4");//mientras opcion sea diferente de 4{
+
+}
