@@ -80,6 +80,7 @@ footer{
         }
      footer{
         height: fit-content;
-        background-position: initial;
+        background-position: center;
+        background-size: center;
     }
 }
