@@ -1,22 +1,31 @@
-function mostrarFormulario(tipoFormulario) {
-    // oculta todos los formularios
-    document.querySelectorAll('form').forEach(formulario => formulario.classList.add('hidden'));
-  
-    // muestra solo el formulario correspondiente
-    document.getElementById('formulario-' + tipoFormulario).classList.remove('hidden');
+document.addEventListener("DOMContentLoaded", function() {
+function mostrarFormulario(id) {
+    // ocultar todos los formularios
+    document.querySelectorAll('#formularios form').forEach(function(formulario) {
+      formulario.classList.add('d-none');
+    });
+
+    // mostrar el formulario correspondiente
+    document.querySelector(id).classList.remove('d-none');
   }
-  
-  function enviarFormulario(event, tipoFormulario) {
-    event.preventDefault();
-  
-    // valida los campos requeridos
-    if (validarFormulario(tipoFormulario)) {
-      // captura los datos del formulario
-      var datosFormulario = capturarDatosFormulario(tipoFormulario);
-  
-      // muestra el mensaje de agradecimiento
-      document.getElementById('mensaje-enviado').classList.remove('hidden');
-    } else {
-      // muestra el mensaje de error
-      document.getElementById('mensaje-error').
-  
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // ocultar los formularios en pantallas pequeñas
+    if (window.innerWidth < 600) {
+      document.querySelectorAll('#formularios form').forEach(function(formulario) {
+        formulario.classList.add('d-none');
+      });
+    }
+
+    // agregar el evento onclick a los enlaces de la barra de navegación
+    document.querySelector('#navbarNav a[href="#formulario-contacto"]').onclick = function() {
+      mostrarFormulario('#formulario-contacto');
+      return false;
+    };
+
+    document.querySelector('#navbarNav a[href="#formulario-reserva"]').onclick = function() {
+      mostrarFormulario('#formulario-reserva');
+      return false;
+    };
+  });
+});

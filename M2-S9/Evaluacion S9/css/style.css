@@ -25,9 +25,3 @@ p{
     height: 470px;
     object-fit: cover;
 }
-@media (max-width="600px") {
-    .oculto {
-        display: none;
-      }
-      
-}

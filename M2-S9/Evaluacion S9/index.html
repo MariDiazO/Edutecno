@@ -25,13 +25,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Destacados de la semana</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#" onclick="mostrarFormulario('#formulario-contacto')">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reserva</a>
+                <a class="nav-link" href="#" onclick="mostrarFormulario('#formulario-reserva')">Reserva</a>
               </li>
             </ul>
           </div>
@@ -47,7 +47,7 @@
     </section>
 
     <!-- cartas -->
-    <section class="container mt-4">
+    <section id="menu" class="container mt-4">
         <div class="row row-cols-1 row-cols-md-3 g-6">
             <!-- primera carta -->
             <div class="col my-2">
@@ -83,49 +83,46 @@
     </section>
 
     <!-- formularios -->
-    <section id="seccion-comunicarse" class="container mt-5 mb-5 d-none d-md-block">
+    <section class="container mt-5 mb-5 d-none d-md-block">
       <div class="row">
         <!-- contacto -->
         <div class="formulario col-sm-12 col-md-12 mb-5 m-auto p-4 bg-dark text-light">
-        <a href="#" onclick="mostrarFormulario('comunicarse')">Contacto</a>
-        <form id="formulario-comunicarse" class="hidden" onsubmit="enviarFormulario(event, 'comunicarse')"> 
-            <form >
+            <form id="formulario-contacto">
                 <h5 class="text-center">Comentarios</h5>
                 <div class="mb-3"> <!--nombre-->
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombreC" aria-describedby="ingresoNombre" placeholder="Fulanito Perez">
+                  <input type="text" class="form-control" id="nombreC" aria-describedby="ingresoNombre" placeholder="Flor Flores">
                 </div>
                 <div class="mb-3"><!--Correo-->
                   <label for="correo" class="form-label">Correo</label>
-                  <input type="email" class="form-control" id="correoC" placeholder="correo@gmail.com">
+                  <input type="email" class="form-control" id="correoC" placeholder="tucorreo@aqui.com">
                 </div>
                 <div class="mb-3"><!--telefono-->
                   <label for="telefono" class="form-label">Teléfono</label>
-                  <input type="tel" class="form-control" id="telefonoC" placeholder="956000890">
+                  <input type="tel" class="form-control" id="telefonoC" placeholder="956900890">
                 </div>
                 <div class="mb-3"><!--comentarios-->
                   <label for="floatingTextarea">Comentarios</label>
-                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <textarea class="form-control" placeholder="Deja tu comentario aqui" id="floatingTextarea"></textarea>
                 </div>
                 <select class="form-select mb-3" aria-label="select"><!--selector-->
-                  <option selected>Motivos</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option selected>Consultas</option>
+                  <option value="1">Reclamos</option>
+                  <option value="2">Felicitaciones</option>
+                  <option value="3">Sugerencias</option>
                 </select>
                 <div class="mb-3 form-check"> <!--checkbox-->
                   <input type="checkbox" class="form-check-input" id="exampleCheck1C">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
+                <!-- boton -->
                 <button type="submit" class="btn btn-primary mb-3">Submit</button>
             </form>
         </div>
-      </section>
-    
+      
         <!-- reserva -->
-      <section>
         <div class="formulario col-sm-12 col-md-12 mb-5 m-auto p-4 bg-dark text-light">
-            <form id="reserva">
+            <form id="formulario-reserva">
               <h5 class="text-center">Reserva</h5>
               <div class="mb-3"> <!--nombre-->
                 <label for="nombre" class="form-label">Nombre</label>
@@ -149,17 +146,18 @@
               </div>
               <div class="mb-3"><!--cantidad de asistentes-->
                 <label for="asistentes" class="form-label">Cantidad de asistentes</label>
-                <input type="number" class="form-control" id="asistentesReserva" min="1">
+                <input type="number" class="form-control" id="asistentesReserva" min="1" max="10">
               </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1Reserva">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
-      </section>
-  
+      </div>
+    </section>
+
     <!-- carousel de imagenes -->
     <section class="container-fluid mb-5 p-0 stycky-bottom">
       <div id="carouselExampleIndicators" class="carousel slide">
@@ -189,14 +187,6 @@
         </button>
       </div>
     </section>
-
-    <div id="mensaje-enviado" class="hidden">
-      <!-- mensaje de agradecimiento por enviar el formulario -->
-    </div>
-
-    <div id="mensaje-error" class="hidden">
-      <!-- mensaje de error si los campos requeridos no están completos -->
-    </div>
     
     <!-- footer o pie de pagina -->
     <footer class="p-3 bg-dark text-light text-center fixed-bottom">
