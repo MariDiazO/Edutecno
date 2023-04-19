@@ -21,7 +21,7 @@ function mostrarTabla(response){
         contenido.innerHTML += // ` esta comilla francesa indica que html lea los datos temporales
         `<td>${temp.name}</td>
         <td>${temp.level}</td> 
-        <td><img src="${temp.img}" alt"" width ="50px" heigth="50px"></td>
+        <td><img src="${temp.img}" alt"" width ="60px" heigth="60px"></td>
         `
         }
    }
